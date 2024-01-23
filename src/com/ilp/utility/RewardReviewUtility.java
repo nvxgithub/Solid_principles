@@ -2,7 +2,6 @@ package com.ilp.utility;
 
 import com.ilp.services.DiscountReward;
 import com.ilp.services.OverallReview;
-import com.ilp.services.PointReward;
 import com.ilp.services.RatingOnlyReview;
 import com.ilp.services.RatingConverter;
 import com.ilp.services.ReviewService;
@@ -18,18 +17,6 @@ public class RewardReviewUtility {
 		customer.earnLoyaltyPoints(100);
 		System.out.println("Loyalty points:"+customer.getLoyaltyPoints());
 		
-		
-		 PointReward pointReward = new PointReward("Free Night Stay", 1000);
-	     DiscountReward discountReward = new DiscountReward("10% Off on Next Booking", 10.0);
-	     
-	     if(pointReward.isRedeemable(500))
-	     {
-	    	 System.out.println("Is redeemable");
-	     }
-	     else {
-	    	 System.out.println("No enough points");
-	     }
-	    
 	  
 	     OverallReview overallReview=new OverallReview();
 	     RatingOnlyReview ratingOnlyReview=new RatingOnlyReview();
